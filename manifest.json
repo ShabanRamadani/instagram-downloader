@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Instagram downloader",
+  "description": "Extension for instagram web to download posted videos and video stories.",
+  "version": "1.0.0",
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "src/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "src/content.js"
+      ],
+      "matches": [
+        "https://*.instagram.com/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "assets/logo.png",
+    "48": "assets/logo.png",
+    "128": "assets/logo.png"
+  }
+}
